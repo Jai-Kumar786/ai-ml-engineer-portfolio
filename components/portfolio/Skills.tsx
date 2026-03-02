@@ -6,33 +6,45 @@ import { Brain, BarChart3, Code2, Database, Layers, Cloud, Terminal } from 'luci
 interface SkillGroup { icon: React.ReactNode; title: string; description: string; tools: string[]; level: number; color: string }
 
 const skills: SkillGroup[] = [
-  { icon: <Brain className="w-5 h-5" />, title: 'DATA_SCIENCE & AI/ML',
+  {
+    icon: <Brain className="w-5 h-5" />, title: 'DATA_SCIENCE & AI/ML',
     description: 'Production ML systems with XGBoost, BERT, LLMs, LangChain, and CrewAI. End-to-end pipelines from feature engineering to model deployment with drift detection, AI agents, and agentic systems.',
-    tools: ['MLflow','TensorFlow','PyTorch','XGBoost','BERT','Transformers','LangChain','CrewAI','Phidata','SHAP','Deep Learning'],
-    level: 92, color: '#00f5ff' },
-  { icon: <Layers className="w-5 h-5" />, title: 'DATA_ENGINEERING & ETL',
+    tools: ['MLflow', 'TensorFlow', 'PyTorch', 'XGBoost', 'BERT', 'Transformers', 'LangChain', 'CrewAI', 'Phidata', 'SHAP', 'Deep Learning'],
+    level: 92, color: '#00f5ff'
+  },
+  {
+    icon: <Layers className="w-5 h-5" />, title: 'DATA_ENGINEERING & ETL',
     description: 'Robust cloud data pipelines processing billions of events/day with 99.99% uptime. Apache Spark, Delta Lake, Apache Airflow, Event Hubs, and NoSQL/SQL data architecture.',
-    tools: ['Apache Spark','Apache Airflow','Delta Lake','Event Hubs','Pandas','MongoDB','Redis','PostgreSQL','MySQL'],
-    level: 88, color: '#bf00ff' },
-  { icon: <Cloud className="w-5 h-5" />, title: 'CLOUD_PLATFORMS & MLOPS',
+    tools: ['Apache Spark', 'Apache Airflow', 'Delta Lake', 'Event Hubs', 'Pandas', 'MongoDB', 'Redis', 'PostgreSQL', 'MySQL'],
+    level: 88, color: '#bf00ff'
+  },
+  {
+    icon: <Cloud className="w-5 h-5" />, title: 'CLOUD_PLATFORMS & MLOPS',
     description: 'Cloud-native AI deployments on Azure (Databricks, AKS, ADLS Gen2) and AWS with CI/CD pipelines, Kubernetes orchestration, Terraform IaC, and Prometheus monitoring.',
-    tools: ['Azure','AWS','Google Cloud','Docker','Kubernetes','Terraform','CI/CD Pipelines','Git/GitHub','Prometheus','Grafana'],
-    level: 85, color: '#00ff41' },
-  { icon: <Code2 className="w-5 h-5" />, title: 'WEB_DEV & APIS',
+    tools: ['Azure', 'AWS', 'Google Cloud', 'Docker', 'Kubernetes', 'Terraform', 'CI/CD Pipelines', 'Git/GitHub', 'Prometheus', 'Grafana'],
+    level: 85, color: '#00ff41'
+  },
+  {
+    icon: <Code2 className="w-5 h-5" />, title: 'WEB_DEV & APIS',
     description: 'Enterprise full-stack applications with FastAPI, Flask, Spring Boot, MERN Stack, and event-driven architecture. JWT authentication, RESTful APIs, and scalable microservices on AWS.',
-    tools: ['FastAPI','Flask','Spring Boot','Node.js','Express.js','React.js','Angular.js','RESTful APIs','Hibernate'],
-    level: 80, color: '#ff0090' },
-  { icon: <BarChart3 className="w-5 h-5" />, title: 'DATA_VISUALIZATION & BI',
+    tools: ['FastAPI', 'Flask', 'Spring Boot', 'Node.js', 'Express.js', 'React.js', 'Angular.js', 'RESTful APIs', 'Hibernate'],
+    level: 80, color: '#ff0090'
+  },
+  {
+    icon: <BarChart3 className="w-5 h-5" />, title: 'DATA_VISUALIZATION & BI',
     description: 'Interactive analytics dashboards for market segmentation, sentiment analysis, flight analytics, and Netflix content strategy through rich interactive visual tools.',
-    tools: ['Matplotlib','Seaborn','Plotly','Power BI','Tableau','Excel','Streamlit','Gradio','Jupyter','DAX Studio'],
-    level: 87, color: '#ff6d00' },
-  { icon: <Database className="w-5 h-5" />, title: 'BIG_DATA & PROGRAMMING',
-    description: 'Expert-level Python (9+ months) and SQL for advanced data manipulation and ETL processes. Big Data technologies for distributed processing across logistics, payments, and e-commerce domains.',
-    tools: ['Python (Expert)','SQL (Expert)','Java','JavaScript','TypeScript','R','Hadoop','MapReduce','HDFS','Hive','Sqoop'],
-    level: 95, color: '#00f5ff' },
+    tools: ['Matplotlib', 'Seaborn', 'Plotly', 'Power BI', 'Tableau', 'Excel', 'Streamlit', 'Gradio', 'Jupyter', 'DAX Studio'],
+    level: 87, color: '#ff6d00'
+  },
+  {
+    icon: <Database className="w-5 h-5" />, title: 'BIG_DATA & PROGRAMMING',
+    description: 'Expert-level Python (1+ year) and SQL for advanced data manipulation and ETL processes. Big Data technologies for distributed processing across logistics, payments, and e-commerce domains.',
+    tools: ['Python (Expert)', 'SQL (Expert)', 'Java', 'JavaScript', 'TypeScript', 'R', 'Hadoop', 'MapReduce', 'HDFS', 'Hive', 'Sqoop'],
+    level: 95, color: '#00f5ff'
+  },
 ]
 
-const domains = ['Logistics','Payment Processing','Marketplaces','E-commerce','Predictive Maintenance','Cybersecurity','Telecom','Agritech']
+const domains = ['Logistics', 'Payment Processing', 'Marketplaces', 'E-commerce', 'Predictive Maintenance', 'Cybersecurity', 'Telecom', 'Agritech']
 
 function NeonBar({ level, color, inView }: { level: number; color: string; inView: boolean }) {
   const [prog, setProg] = useState(0)
@@ -41,8 +53,10 @@ function NeonBar({ level, color, inView }: { level: number; color: string; inVie
     <div className="flex items-center gap-3">
       <div className="flex-1 h-1.5 rounded-none" style={{ background: '#0d2444', clipPath: 'polygon(2px 0%,100% 0%,calc(100% - 2px) 100%,0% 100%)' }}>
         <div className="h-full transition-all duration-1000 ease-out rounded-none"
-          style={{ width: `${prog}%`, background: `linear-gradient(90deg,${color},${color}88)`,
-            boxShadow: `0 0 8px ${color}88`, transition: 'width 1.4s cubic-bezier(0.34,1.56,0.64,1)' }} />
+          style={{
+            width: `${prog}%`, background: `linear-gradient(90deg,${color},${color}88)`,
+            boxShadow: `0 0 8px ${color}88`, transition: 'width 1.4s cubic-bezier(0.34,1.56,0.64,1)'
+          }} />
       </div>
       <span className="font-mono text-xs w-8 text-right" style={{ color }}>{prog}%</span>
     </div>
@@ -98,13 +112,15 @@ function SkillCard({ skill, index, inView }: { skill: SkillGroup; index: number;
 
       {/* Tools */}
       <div className="flex flex-wrap gap-1.5">
-          {skill.tools.map(tool => (
-            <span key={tool} className="font-mono text-xs px-2 py-0.5 tracking-wide transition-all duration-200 hover:text-cyan-300"
-              style={{ color: `${skill.color}99`, border: `1px solid ${skill.color}28`, background: `${skill.color}0a`,
-                clipPath: 'polygon(3px 0%,100% 0%,calc(100% - 3px) 100%,0% 100%)' }}>
-              {tool}
-            </span>
-          ))}
+        {skill.tools.map(tool => (
+          <span key={tool} className="font-mono text-xs px-2 py-0.5 tracking-wide transition-all duration-200 hover:text-cyan-300"
+            style={{
+              color: `${skill.color}99`, border: `1px solid ${skill.color}28`, background: `${skill.color}0a`,
+              clipPath: 'polygon(3px 0%,100% 0%,calc(100% - 3px) 100%,0% 100%)'
+            }}>
+            {tool}
+          </span>
+        ))}
       </div>
     </article>
   )
@@ -139,9 +155,11 @@ export default function Skills() {
           </div>
           <h2 id="skills-heading"
             className="font-bold mb-4 text-balance"
-            style={{ fontFamily: 'var(--font-display,Orbitron),monospace', fontSize: 'clamp(1.6rem,4vw,2.8rem)',
+            style={{
+              fontFamily: 'var(--font-display,Orbitron),monospace', fontSize: 'clamp(1.6rem,4vw,2.8rem)',
               background: 'linear-gradient(90deg,#bf00ff 0%,#00f5ff 100%)',
-              WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+              WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'
+            }}>
             SKILLS_&amp;_ABILITIES
           </h2>
           <p className="font-mono text-sm max-w-xl leading-relaxed" style={{ color: '#4a7a9b' }}>

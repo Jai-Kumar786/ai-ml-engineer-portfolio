@@ -9,7 +9,22 @@ interface TimelineItem {
 }
 
 const timeline: TimelineItem[] = [
-  { role: 'Data Analyst Intern', company: 'Labmentix Pvt. Ltd.', period: 'Aug 2025 — Feb 2026',
+  {
+    role: 'Data Science Intern', company: 'Unified Mentor Pvt. Ltd.', period: 'Sept 2025 — Mar 2026',
+    location: 'Gurugram, India', type: 'work',
+    bullets: [
+      'Developed and executed the Indian Agricultural Market Analysis and EV Predictive Maintenance System projects, covering the full lifecycle of data collection, cleaning, EDA, and predictive modeling.',
+      'Leveraged Python, Pandas, and NumPy alongside machine learning algorithms to derive actionable insights from real-world problem statements.',
+      'Commended for strong problem-solving abilities, an eagerness to learn new concepts, and a commitment to continuous improvement based on technical feedback.',
+    ],
+    tags: ['Python', 'Pandas', 'NumPy', 'Machine Learning', 'Data Visualization', 'EDA'],
+    subProjects: [
+      { title: 'Indian Agricultural Market Analysis', period: 'Sept 2025 — Mar 2026', stack: 'Python, Pandas, NumPy, Data Visualization, EDA' },
+      { title: 'EV Predictive Maintenance System', period: 'Sept 2025 — Mar 2026', stack: 'Python, Machine Learning, Predictive Modeling, NumPy' },
+    ]
+  },
+  {
+    role: 'Data Analyst Intern', company: 'Labmentix Pvt. Ltd.', period: 'Aug 2025 — Feb 2026',
     location: 'Bengaluru, India', type: 'work',
     bullets: [
       'Achieved 40% improvement in data processing efficiency through execution of data cleaning, data analysis, and data visualization projects using Python and SQL.',
@@ -17,8 +32,10 @@ const timeline: TimelineItem[] = [
       'Ensured 95% data quality and attention to detail across multiple data analysis projects.',
       'Achievement: TCS iON MLOps Expert certification (86%) during tenure — application-oriented knowledge in production ML systems.',
     ],
-    tags: ['Python','SQL','Power BI','Tableau','Streamlit','Excel','Data Analysis'] },
-  { role: 'Machine Learning & Data Science Intern', company: 'Feynn Labs Services', period: 'Oct 2025 — Dec 2025',
+    tags: ['Python', 'SQL', 'Power BI', 'Tableau', 'Streamlit', 'Excel', 'Data Analysis']
+  },
+  {
+    role: 'Machine Learning & Data Science Intern', company: 'Feynn Labs Services', period: 'Oct 2025 — Dec 2025',
     location: 'Remote', type: 'work',
     bullets: [
       'Achieved 78.3% market coverage and projected 8% revenue growth through market segmentation analysis on 1,431 consumer records using K-means and hierarchical clustering.',
@@ -26,13 +43,15 @@ const timeline: TimelineItem[] = [
       'Enhanced business intelligence by 20% through demographic, behavioral, and psychographic data analysis.',
       'Enhanced analytical capabilities by 25% through developing 15+ business intelligence SQL queries.',
     ],
-    tags: ['Python','K-means','Clustering','Scikit-learn','Pandas','SQL','Market Analysis','AI Prototyping'],
+    tags: ['Python', 'K-means', 'Clustering', 'Scikit-learn', 'Pandas', 'SQL', 'Market Analysis', 'AI Prototyping'],
     subProjects: [
       { title: "McDonald's Market Segmentation & Analysis", period: 'Oct–Nov 2025', stack: 'K-means, Hierarchical Clustering, Python, Scikit-learn' },
       { title: 'Netflix Sentiment Analysis & Content Recommendation', period: 'Sept–Oct 2025', stack: 'Python, BERT, NLP, Sentiment Analysis, Transformers' },
       { title: 'Airbnb Pricing Prediction Model', period: 'Sept–Oct 2025', stack: 'Python, Scikit-learn, XGBoost, Feature Engineering' },
-    ] },
-  { role: 'Data Science Intern — AI & ML Skilling Program', company: 'AICTE × Vodafone Idea Foundation × Edunet × BSNL',
+    ]
+  },
+  {
+    role: 'Data Science Intern — AI & ML Skilling Program', company: 'AICTE × Vodafone Idea Foundation × Edunet × BSNL',
     period: '25 Nov 2025 — 26 Dec 2025', location: 'Remote, India', type: 'work',
     bullets: [
       'Completed government-backed AI & ML Skilling Program in partnership with IGNOU, Vodafone Idea Foundation, BSNL, and Department of Telecommunications.',
@@ -40,20 +59,24 @@ const timeline: TimelineItem[] = [
       'Achieved 85% prediction accuracy in Airbnb pricing model and developed Netflix sentiment data analysis system.',
       'Improved data processing efficiency by 30% through implementation of advanced NLP techniques.',
     ],
-    tags: ['LLMs','NLP','Python','AI & ML','Telecom','IGNOU','Vodafone','BSNL','Edunet','Predictive Modeling'] },
-  { role: 'Web Developer', company: 'Innomatics Research Labs', period: 'June 2023 — Mar 2024',
+    tags: ['LLMs', 'NLP', 'Python', 'AI & ML', 'Telecom', 'IGNOU', 'Vodafone', 'BSNL', 'Edunet', 'Predictive Modeling']
+  },
+  {
+    role: 'Web Developer', company: 'Innomatics Research Labs', period: 'June 2023 — Mar 2024',
     location: 'Remote, India', type: 'work',
     bullets: [
       'Achieved 20% improvement in user engagement through development of full-stack web applications using MERN Stack.',
       'Delivered 30% enhancement in system integration through building enterprise solutions with Java Spring Boot and RESTful APIs.',
       'Improved user experience by 25% through seamless frontend and backend integration.',
     ],
-    tags: ['MERN Stack','Java','Spring Boot','RESTful APIs','MongoDB','React.js','Node.js'],
+    tags: ['MERN Stack', 'Java', 'Spring Boot', 'RESTful APIs', 'MongoDB', 'React.js', 'Node.js'],
     subProjects: [
       { title: 'ToDo Application (MERN Stack)', period: 'Jan 2024 — Dec 2024', stack: 'React.js, Node.js, Express.js, MongoDB, JWT, RESTful APIs' },
       { title: 'Engineering Materials: Data-Driven Analysis', period: 'Apr–May 2025', stack: 'Python, Pandas, Seaborn, Matplotlib, Plotly' },
-    ] },
-  { role: 'Advanced Nanodegree — Data Science & AI/ML for Engineering Applications',
+    ]
+  },
+  {
+    role: 'Advanced Nanodegree — Data Science & AI/ML for Engineering Applications',
     company: 'DIYguru Mobility Pvt. Ltd. (Certified by EICT, IIT Guwahati — Accredited by AICTE)',
     period: 'Jan 2025 — Nov 2025', location: 'Remote, India', type: 'education',
     bullets: [
@@ -61,28 +84,37 @@ const timeline: TimelineItem[] = [
       'Built end-to-end AI pipelines processing 8.6B events/day with 99.99% uptime and 24.7x ROI on Azure.',
       'Deep focus on BERT, LLMs, LangChain, CrewAI, AI agents, and scalable distributed systems.',
     ],
-    tags: ['MLOps','NLP','BERT','LLMs','LangChain','AI Agents','Distributed Systems'] },
-  { role: 'MLOps — Scalable ML Operations (Associate Level)',
+    tags: ['MLOps', 'NLP', 'BERT', 'LLMs', 'LangChain', 'AI Agents', 'Distributed Systems']
+  },
+  {
+    role: 'MLOps — Scalable ML Operations (Associate Level)',
     company: 'IIT Madras Pravartak Technologies Foundation & TCS iON',
     period: 'Sept 2025 — Dec 2025', location: 'Remote, India', type: 'education',
     bullets: [
       'Certificate ID: 26130110837 — Issue Date: 11/12/2025.',
       'Comprehensive training in ML model deployment, CI/CD pipelines, model monitoring, and production systems.',
     ],
-    tags: ['CI/CD','MLflow','Kubernetes','Model Monitoring','Docker'] },
-  { role: 'Master of Computer Applications (MCA)',
+    tags: ['CI/CD', 'MLflow', 'Kubernetes', 'Model Monitoring', 'Docker']
+  },
+  {
+    role: 'Master of Computer Applications (MCA)',
     company: 'Indira Gandhi National Open University (IGNOU)',
     period: 'July 2022 — Dec 2025', location: 'Delhi, India', type: 'education',
-    bullets: ['First Division — Overall Score: 62%.','Specialized in advanced algorithms, distributed systems, AI/ML, and full-stack development.'],
-    tags: ['Algorithms','AI/ML','Full-Stack','Distributed Systems'] },
-  { role: 'Post Graduate Diploma in Computer Applications (PGDCA)',
+    bullets: ['First Division — Overall Score: 62%.', 'Specialized in advanced algorithms, distributed systems, AI/ML, and full-stack development.'],
+    tags: ['Algorithms', 'AI/ML', 'Full-Stack', 'Distributed Systems']
+  },
+  {
+    role: 'Post Graduate Diploma in Computer Applications (PGDCA)',
     company: 'Indira Gandhi National Open University (IGNOU)',
     period: 'Jan 2021 — June 2022', location: 'Delhi, India', type: 'education',
-    bullets: ['First Division — Overall Score: 68%.','Foundation in programming, database management, networking, and software engineering.'],
-    tags: ['Programming','DBMS','Networking','Software Engineering'] },
-  { role: 'Bachelor of Arts (BA)', company: 'Chhatrapati Shahu Ji Maharaj University',
+    bullets: ['First Division — Overall Score: 68%.', 'Foundation in programming, database management, networking, and software engineering.'],
+    tags: ['Programming', 'DBMS', 'Networking', 'Software Engineering']
+  },
+  {
+    role: 'Bachelor of Arts (BA)', company: 'Chhatrapati Shahu Ji Maharaj University',
     period: 'Jan 2017 — Dec 2020', location: 'Kanpur, India', type: 'education',
-    bullets: ['Second Division — Overall Score: 54%.'], tags: [] },
+    bullets: ['Second Division — Overall Score: 54%.'], tags: []
+  },
 ]
 
 const certifications = [
@@ -102,12 +134,14 @@ function TimelineEntry({ item, index }: { item: TimelineItem; index: number }) {
     return () => obs.disconnect()
   }, [])
   const isWork = item.type === 'work'
-  const color  = isWork ? '#00f5ff' : '#bf00ff'
+  const color = isWork ? '#00f5ff' : '#bf00ff'
 
   return (
     <article ref={ref} className="relative pl-14 group"
-      style={{ opacity: vis ? 1 : 0, transform: vis ? 'translateX(0)' : 'translateX(-24px)',
-        transition: 'opacity 0.6s ease, transform 0.6s ease', transitionDelay: `${index * 60}ms` }}>
+      style={{
+        opacity: vis ? 1 : 0, transform: vis ? 'translateX(0)' : 'translateX(-24px)',
+        transition: 'opacity 0.6s ease, transform 0.6s ease', transitionDelay: `${index * 60}ms`
+      }}>
 
       {/* Dot */}
       <div className="absolute left-3.5 top-2 w-3 h-3 transition-all duration-500"
@@ -133,8 +167,10 @@ function TimelineEntry({ item, index }: { item: TimelineItem; index: number }) {
           <p className="font-mono text-xs pl-5 mt-0.5" style={{ color: '#4a7a9b' }}>{item.location}</p>
         </div>
         <span className="font-mono text-xs px-3 py-1 flex-shrink-0 self-start"
-          style={{ color: '#4a7a9b', border: '1px solid #0d2444', background: '#050f20',
-            clipPath: 'polygon(4px 0%,100% 0%,calc(100% - 4px) 100%,0% 100%)' }}>
+          style={{
+            color: '#4a7a9b', border: '1px solid #0d2444', background: '#050f20',
+            clipPath: 'polygon(4px 0%,100% 0%,calc(100% - 4px) 100%,0% 100%)'
+          }}>
           {item.period}
         </span>
       </div>
@@ -169,10 +205,12 @@ function TimelineEntry({ item, index }: { item: TimelineItem; index: number }) {
         <div className="flex flex-wrap gap-1.5">
           {item.tags.map(tag => (
             <span key={tag} className="font-mono text-xs px-2 py-0.5 tracking-wide"
-              style={{ color: isWork ? color : '#6a6a9b',
+              style={{
+                color: isWork ? color : '#6a6a9b',
                 border: `1px solid ${isWork ? color + '44' : '#1a1a3a'}`,
                 background: isWork ? color + '0d' : '#050510',
-                clipPath: 'polygon(3px 0%,100% 0%,calc(100% - 3px) 100%,0% 100%)' }}>
+                clipPath: 'polygon(3px 0%,100% 0%,calc(100% - 3px) 100%,0% 100%)'
+              }}>
               {tag}
             </span>
           ))}
@@ -221,13 +259,15 @@ export default function Experience() {
           </div>
           <h2 id="experience-heading"
             className="font-bold mb-4 text-balance"
-            style={{ fontFamily: 'var(--font-display,Orbitron),monospace', fontSize: 'clamp(1.6rem,4vw,2.8rem)',
+            style={{
+              fontFamily: 'var(--font-display,Orbitron),monospace', fontSize: 'clamp(1.6rem,4vw,2.8rem)',
               background: 'linear-gradient(90deg,#ffffff 0%,#00f5ff 100%)',
-              WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+              WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'
+            }}>
             EXPERIENCE_&amp;_EDUCATION
           </h2>
           <p className="font-mono text-sm max-w-xl leading-relaxed" style={{ color: '#4a7a9b' }}>
-            4 internships across ML, data science, and full-stack development — grounded in real-world impact, with certifications from IIT Madras, IIT Guwahati, and TCS iON.
+            5 internships across ML, data science, and full-stack development — grounded in real-world impact, with certifications from IIT Madras, IIT Guwahati, and TCS iON.
           </p>
           <div className="cyber-line w-32 mt-6" />
         </div>
@@ -262,8 +302,10 @@ export default function Experience() {
                     <p className="font-mono text-xs" style={{ color: '#4a7a9b' }}>{cert.issuer}</p>
                     {cert.detail && <p className="font-mono text-xs italic mt-0.5" style={{ color: '#2a4a5b' }}>{cert.detail}</p>}
                     <span className="inline-block mt-2 font-mono text-xs px-2 py-0.5"
-                      style={{ color: '#00f5ff', border: '1px solid #00f5ff33', background: '#00f5ff08',
-                        clipPath: 'polygon(3px 0%,100% 0%,calc(100% - 3px) 100%,0% 100%)' }}>
+                      style={{
+                        color: '#00f5ff', border: '1px solid #00f5ff33', background: '#00f5ff08',
+                        clipPath: 'polygon(3px 0%,100% 0%,calc(100% - 3px) 100%,0% 100%)'
+                      }}>
                       {cert.year}
                     </span>
                   </div>

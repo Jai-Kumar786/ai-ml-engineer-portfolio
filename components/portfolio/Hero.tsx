@@ -5,10 +5,10 @@ import { ArrowRight, Download, ChevronDown } from 'lucide-react'
 
 const ROLES = ['DATA_SCIENTIST', 'ML_ENGINEER', 'MLOPS_SPECIALIST', 'FULL_STACK_DEV', 'AI_ORCHESTRATOR']
 const STATS = [
-  { value: '99.99%', label: 'UPTIME',      color: '#00f5ff' },
-  { value: '24.7x',  label: 'ROI',         color: '#bf00ff' },
-  { value: '8.6B',   label: 'EVENTS/DAY',  color: '#00ff41' },
-  { value: '95%',    label: 'AI_ACCURACY', color: '#ff0090' },
+  { value: '99.99%', label: 'UPTIME', color: '#00f5ff' },
+  { value: '24.7x', label: 'ROI', color: '#bf00ff' },
+  { value: '8.6B', label: 'EVENTS/DAY', color: '#00ff41' },
+  { value: '95%', label: 'AI_ACCURACY', color: '#ff0090' },
 ]
 
 function HexGrid() {
@@ -25,7 +25,7 @@ function HexGrid() {
     const R = 30; let t = 0
     const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height)
-      const cols = Math.ceil(canvas.width  / (R * 1.5)) + 2
+      const cols = Math.ceil(canvas.width / (R * 1.5)) + 2
       const rows = Math.ceil(canvas.height / (R * Math.sqrt(3))) + 2
       for (let col = -1; col < cols; col++) {
         for (let row = -1; row < rows; row++) {
@@ -72,14 +72,14 @@ function PlasmaOrbs() {
 
 function Typewriter() {
   const [display, setDisplay] = useState('')
-  const [idx, setIdx]         = useState(0)
-  const [del, setDel]         = useState(false)
+  const [idx, setIdx] = useState(0)
+  const [del, setDel] = useState(false)
   useEffect(() => {
     const role = ROLES[idx]
     let t: ReturnType<typeof setTimeout>
-    if (!del && display.length < role.length)       t = setTimeout(() => setDisplay(role.slice(0, display.length + 1)), 75)
+    if (!del && display.length < role.length) t = setTimeout(() => setDisplay(role.slice(0, display.length + 1)), 75)
     else if (!del && display.length === role.length) t = setTimeout(() => setDel(true), 1600)
-    else if (del && display.length > 0)              t = setTimeout(() => setDisplay(role.slice(0, display.length - 1)), 40)
+    else if (del && display.length > 0) t = setTimeout(() => setDisplay(role.slice(0, display.length - 1)), 40)
     else { setDel(false); setIdx(i => (i + 1) % ROLES.length) }
     return () => clearTimeout(t)
   }, [display, del, idx])
@@ -126,13 +126,13 @@ export default function Hero() {
       <PlasmaOrbs />
 
       {/* Corner brackets */}
-      {(['top-6 left-6','top-6 right-6','bottom-6 left-6','bottom-6 right-6'] as const).map((pos, i) => (
+      {(['top-6 left-6', 'top-6 right-6', 'bottom-6 left-6', 'bottom-6 right-6'] as const).map((pos, i) => (
         <div key={i} className={`absolute ${pos} w-6 h-6 pointer-events-none`} aria-hidden="true"
           style={{
-            borderTop:    i < 2 ? '1px solid rgba(0,245,255,0.5)' : undefined,
+            borderTop: i < 2 ? '1px solid rgba(0,245,255,0.5)' : undefined,
             borderBottom: i >= 2 ? '1px solid rgba(0,245,255,0.5)' : undefined,
-            borderLeft:   i % 2 === 0 ? '1px solid rgba(0,245,255,0.5)' : undefined,
-            borderRight:  i % 2 === 1 ? '1px solid rgba(0,245,255,0.5)' : undefined,
+            borderLeft: i % 2 === 0 ? '1px solid rgba(0,245,255,0.5)' : undefined,
+            borderRight: i % 2 === 1 ? '1px solid rgba(0,245,255,0.5)' : undefined,
           }} />
       ))}
 
@@ -176,7 +176,7 @@ export default function Hero() {
         <p className="font-mono text-sm sm:text-base leading-loose max-w-2xl mb-10"
           style={{ color: '#4a7a9b', animation: 'slideUp 0.6s ease 0.3s both' }}>
           <span style={{ color: '#00f5ff' }}>&gt;&gt;</span>{' '}
-          Expert-level Python (9+ months) &amp; AI orchestration via LangChain, CrewAI &amp; Phidata.
+          Expert-level Python (1+ year) &amp; AI orchestration via LangChain, CrewAI &amp; Phidata.
           Specializing in AI agents &amp; ML models achieving{' '}
           <span style={{ color: '#00ff41', textShadow: '0 0 8px #00ff4177' }}>95% accuracy</span>.
           MLOps pipelines processing{' '}
@@ -187,12 +187,12 @@ export default function Hero() {
 
         {/* Role pills */}
         <div className="flex flex-wrap gap-2 mb-10" style={{ animation: 'slideUp 0.6s ease 0.35s both' }}>
-          {['DATA_SCIENTIST','ML_ENGINEER','MLOPS_SPECIALIST','FULL_STACK_DEV','AI_ORCHESTRATOR'].map((r, i) => (
+          {['DATA_SCIENTIST', 'ML_ENGINEER', 'MLOPS_SPECIALIST', 'FULL_STACK_DEV', 'AI_ORCHESTRATOR'].map((r, i) => (
             <span key={r} className="px-3 py-1 font-mono text-xs tracking-widest transition-all duration-200 cursor-default"
               style={{
-                color: ['#00f5ff','#bf00ff','#00ff41','#ff0090','#ff6d00'][i],
-                border: `1px solid ${['#00f5ff','#bf00ff','#00ff41','#ff0090','#ff6d00'][i]}44`,
-                background: `${['#00f5ff','#bf00ff','#00ff41','#ff0090','#ff6d00'][i]}0d`,
+                color: ['#00f5ff', '#bf00ff', '#00ff41', '#ff0090', '#ff6d00'][i],
+                border: `1px solid ${['#00f5ff', '#bf00ff', '#00ff41', '#ff0090', '#ff6d00'][i]}44`,
+                background: `${['#00f5ff', '#bf00ff', '#00ff41', '#ff0090', '#ff6d00'][i]}0d`,
                 clipPath: 'polygon(6px 0%,100% 0%,calc(100% - 6px) 100%,0% 100%)',
               }}>
               {r}
